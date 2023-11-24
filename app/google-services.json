@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "299655237796",
+    "firebase_url": "https://lovehive-f8522-default-rtdb.firebaseio.com",
+    "project_id": "lovehive-f8522",
+    "storage_bucket": "lovehive-f8522.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299655237796:android:e5f81c23e0e31fd0b81631",
+        "android_client_info": {
+          "package_name": "com.example.lovehive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9b6ug3kQ89V4aeUEXKViFn90EIF7aJ7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299655237796:android:e911775cbb5b4a17b81631",
+        "android_client_info": {
+          "package_name": "com.example.lovehive.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9b6ug3kQ89V4aeUEXKViFn90EIF7aJ7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
