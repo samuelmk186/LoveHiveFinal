@@ -2,6 +2,7 @@ package com.example.lovehive;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
@@ -24,5 +25,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(myAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
+
+        // Find the toolbar and set it as the support action bar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 }

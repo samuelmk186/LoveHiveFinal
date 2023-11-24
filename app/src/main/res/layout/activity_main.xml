@@ -7,13 +7,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <!-- our tablayout to display tabs  -->
+
+    <!-- Add the Toolbar here -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00004A"
+        android:elevation="4dp"
+        />
+
+    <!-- our tablayout to display tabs -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabTextColor="#FFFFFF"
-        android:background="#5D0000"
+        android:background="#00004A"
         app:tabIndicatorHeight="5dp"
         app:tabSelectedTextColor="#000000"/>
 
@@ -23,7 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-   
 </LinearLayout>
 
 

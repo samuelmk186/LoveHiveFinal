@@ -7,22 +7,30 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
 import java.util.ArrayList;
 
 public class MyAdapterActivity extends FragmentPagerAdapter {
-    ArrayList<String> arrayList = new ArrayList<>();
+    private final ArrayList<String> arrayList = new ArrayList<>();
 
-    public MyAdapterActivity(@NonNull FragmentManager fragmentManager){
+    public MyAdapterActivity(@NonNull FragmentManager fragmentManager) {
         super(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
     }
 
     @NonNull
+
     @Override
     public Fragment getItem(int position) {
-        if (position == 2) {
+        if (position == 0) {
+            return new AllUsersFragment();
+        } else if (position == 1) {
+            return new NearFragment();
+        } else if (position == 2) {
+            return new NewFragment();
+        }else if (position == 3) {
             return new FragmentProfileActivity();
         } else {
-            Fragment myFragment = new Fragment();
+            Fragment myFragment = new PrerenceFragment();
             Bundle bundle = new Bundle();
             bundle.putString("TEXT_ID", arrayList.get(position));
             myFragment.setArguments(bundle);
@@ -30,15 +38,17 @@ public class MyAdapterActivity extends FragmentPagerAdapter {
         }
     }
 
+
     @Override
     public int getCount() {
         return arrayList.size();
     }
 
     public void addData() {
-        arrayList.add("CHATS");
-        arrayList.add("STATUS");
-        arrayList.add("Profile");
+        arrayList.add("ALL");
+        arrayList.add("NEAR");
+        arrayList.add("NEW");
+        arrayList.add("PROFILE");
     }
 
     @Override

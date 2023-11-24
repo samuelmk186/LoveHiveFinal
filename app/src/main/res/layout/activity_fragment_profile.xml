@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,167 +6,174 @@
     android:padding="16dp"
     android:background="@color/white">
 
-    <!-- Full Name -->
-    <com.google.android.material.textfield.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="160dp"
-        android:gravity="bottom">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextFullName"
+        <!-- Full Name -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Full Name"
-            android:inputType="textPersonName"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_marginTop="80dp"
+            android:gravity="bottom">
 
-    <!-- Email -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="260dp"
-        android:gravity="bottom">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFullName"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEmail"
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_marginTop="150dp"
+            android:gravity="bottom">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Additional Personal Details -->
+        <!-- Additional Personal Details -->
 
-    <!-- Date of Birth -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="460dp"
-        android:gravity="bottom">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Gender -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="560dp"
-        android:gravity="bottom">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextGender"
+        <!-- Date of Birth -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Gender"
-            android:inputType="text"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_below="@id/editTextEmail"
+            android:layout_marginTop="220dp"
+            android:gravity="bottom"
+            tools:ignore="NotSibling">
 
-    <!-- Address -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="660dp"
-        android:gravity="bottom">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Date of Birth"
+                android:inputType="date"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextAddress"
+        <!-- Gender -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Address"
-            android:inputType="textMultiLine"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_below="@id/editTextDateOfBirth"
+            android:layout_marginTop="290dp"
+            android:gravity="bottom"
+            tools:ignore="NotSibling">
 
-    <!-- Nationality -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="760dp"
-        android:gravity="bottom">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextGender"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Gender"
+                android:inputType="text"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextNationality"
+        <!-- Address -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Nationality"
-            android:inputType="text"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_marginTop="360dp"
+            android:gravity="bottom">
 
-    <!-- Marital Status -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="860dp"
-        android:gravity="bottom">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextMaritalStatus"
+        <!-- Nationality -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Marital Status"
-            android:inputType="text"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_marginTop="430dp"
+            android:gravity="bottom">
 
-    <!-- Bio/About Me -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="960dp"
-        android:gravity="bottom">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNationality"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Nationality"
+                android:inputType="text"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextBio"
+        <!-- Marital Status -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
-            android:hint="Bio/About Me"
-            android:inputType="textMultiLine"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="60dp"
+            android:layout_marginTop="500dp"
+            android:gravity="bottom">
 
-    <!-- Occupation -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="1060dp"
-        android:gravity="bottom">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextMaritalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Marital Status"
+                android:inputType="text"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextOccupation"
+        <!-- Bio/About Me -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="570dp"
+            android:gravity="bottom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextBio"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Bio/About Me"
+                android:inputType="textMultiLine"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Occupation -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="630dp"
+            android:gravity="bottom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:hint="Occupation"
+                android:inputType="text"
+                android:padding="25dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSaveData"
+            android:layout_width="207dp"
             android:layout_height="73dp"
-            android:hint="Occupation"
-            android:inputType="text"
-            android:padding="25dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@id/editTextOccupation"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="680dp"
+            android:layout_marginEnd="146dp"
+            android:layout_marginBottom="16dp"
+            android:text="Save Data"
+            tools:ignore="NotSibling" />
 
-    <Button
-        android:id="@+id/buttonSaveData"
-        android:layout_width="207dp"
-        android:layout_height="73dp"
-        android:layout_below="@+id/editTextOccupation"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="-1074dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="596dp"
-        android:text="Save Data"
-        tools:ignore="NotSibling" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextDateOfBirth"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:hint="Date of Birth"
-        android:inputType="date"
-        android:padding="25dp" />
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

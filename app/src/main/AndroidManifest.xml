@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,13 +17,28 @@
         android:theme="@style/Theme.LoveHive"
         tools:targetApi="31">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".PrerenceFragment"
+            android:exported="false" />
+        <activity
+            android:name=".NewFragment"
+            android:exported="false" />
+        <activity
+            android:name=".NearFragment"
+            android:exported="false" />
+        <activity
+            android:name=".AllUsersFragment"
+            android:exported="false" />
+        <activity
+            android:name=".AllUsersActivity"
+            android:exported="false" />
+        <activity
             android:name=".FragmentProfileActivity"
             android:exported="false" />
         <activity
             android:name=".fragment_itemActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfileFragmentActivity"
             android:exported="false" />
         <activity
             android:name=".MyfragmentActivity"
